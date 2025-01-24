@@ -48,6 +48,7 @@ img {
   font-family: 'Roboto', sans-serif;
   color: #2e2f42;
   background-color: #ffffff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .header-container {
@@ -93,6 +94,22 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link.cfrrent {
+  position: relative;
+}
+
+.nav-link.cfrrent::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
 }
 
 .contacts {
@@ -113,12 +130,14 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-contacts:hover,
 .address-contacts:focus,
 .nav-link:hover,
-.nav-link:focus {
+.nav-link:focus,
+.nav-link.cfrrent {
   color: #404bbf;
 }
 
@@ -126,6 +145,14 @@ img {
 
 .section-hero {
   background: #2e2f42;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office\ 1-min.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1440px;
   padding-top: 188px;
   padding-bottom: 188px;
 }
@@ -194,6 +221,17 @@ img {
   width: calc((100% - 72px) / 4);
 }
 
+.advantages-icon {
+  display: flex;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  width: 264px;
+  height: 112px;
+  background: #f4f4fd;
+  align-items: center;
+  justify-content: center;
+}
+
 .tilte-list {
   font-weight: 500;
   font-size: 20px;
@@ -236,6 +274,7 @@ img {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   background: #fff;
+  padding: 0 0px 32px 0px;
 }
 
 .cards-list {
@@ -245,7 +284,7 @@ img {
 }
 
 .subtitle-position {
-  padding: 32px 0;
+  padding: 8px 0;
 }
 
 .ourteam-subtitle {
@@ -266,6 +305,20 @@ img {
   text-align: center;
   color: #434455;
   margin: 0 auto;
+}
+
+.social-list {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.social-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
 }
 
 /* Our Portfolio Section */
@@ -323,6 +376,10 @@ img {
 
 /* Footer Section */
 
+.footer-container {
+  display: flex;
+}
+
 .page-footer {
   padding: 100px 0;
   background: #2e2f42;
@@ -348,4 +405,25 @@ img {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   width: 264px;
+}
+
+.social-media {
+  margin-left: 120px;
+  width: 208px;
+  height: 80px;
+}
+
+.footer-text-sm {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 0 0 0;
 }
