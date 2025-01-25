@@ -142,7 +142,9 @@ img {
 .address-contacts:focus,
 .nav-link:hover,
 .nav-link:focus,
-.nav-link.cfrrent {
+.nav-link.current,
+.contacts-link:hover,
+.contacts-link:focus {
   color: #404bbf;
 }
 
