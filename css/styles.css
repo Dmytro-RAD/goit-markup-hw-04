@@ -190,16 +190,15 @@ img {
   border-radius: 4px;
   padding: 16px 32px;
   min-width: 169px;
-  height: 56px;
   height: auto;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  background: #4d5ae5;
+  background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-mainpage:hover,
 .button-mainpage:focus {
-  background: #404bbf;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #404bbf;
 }
 
 /* Advantages Section */
@@ -293,7 +292,7 @@ img {
 }
 
 .subtitle-position {
-  padding: 32px 16px;
+  padding: 32px 0;
 }
 
 .ourteam-subtitle {
@@ -319,29 +318,28 @@ img {
 .social-list {
   display: flex;
   gap: 24px;
+  width: 100%;
+  height: 100%;
   align-items: center;
   justify-content: center;
   padding: 8px 0 0 0;
 }
 
-.social-item {
+.social-link {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
   background-color: #4d5ae5;
-}
-
-.social-item:hover,
-.social-item:focus {
-  background-color: #404bbf;
+  border-radius: 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: #f4f4fd;
 }
 
-.icons-soc {
-  fill: #f4f4fd;
+.social-link:hover,
+.social-link:focus {
+  background-color: #404bbf;
 }
 
 /* Our Portfolio Section */
@@ -373,6 +371,7 @@ img {
 
 .card-item {
   width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .thumb {
@@ -406,11 +405,9 @@ img {
   padding: 32px 16px;
 }
 
-.thumb:hover,
 .title-list:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-tiltle {
@@ -434,6 +431,10 @@ img {
 .footer-container {
   display: flex;
   align-items: baseline;
+}
+
+.logo-text {
+  margin-right: 120px;
 }
 
 .page-footer {
@@ -469,11 +470,6 @@ img {
   height: 80px;
 }
 
-.sm-link {
-  width: 100%;
-  height: 100%;
-}
-
 .footer-text-sm {
   font-weight: 500;
   font-size: 16px;
@@ -490,8 +486,13 @@ img {
   justify-content: center;
 }
 
-.social-item.footer:hover,
-.social-item.footer:focus {
-  background-color: #31d0aa;
+.social-item-footer {
+  width: 40px;
+  height: 40px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link.footer:hover,
+.social-link.footer:focus {
+  background-color: #31d0aa;
 }
