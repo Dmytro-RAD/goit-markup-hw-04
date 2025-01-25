@@ -48,7 +48,8 @@ img {
   font-family: 'Roboto', sans-serif;
   color: #2e2f42;
   background-color: #ffffff;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -156,10 +157,11 @@ img {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office\ 1-min.jpg);
+    url(../images/people-office.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1440px;
+  background-size: cover;
+  max-width: 1440px;
   padding-top: 188px;
   padding-bottom: 188px;
 }
@@ -197,6 +199,7 @@ img {
 .button-mainpage:hover,
 .button-mainpage:focus {
   background: #404bbf;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Advantages Section */
@@ -291,7 +294,7 @@ img {
 }
 
 .subtitle-position {
-  padding: 8px 0;
+  padding: 32px 0;
 }
 
 .ourteam-subtitle {
